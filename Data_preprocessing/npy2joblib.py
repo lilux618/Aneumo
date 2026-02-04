@@ -1,13 +1,13 @@
 """
-transfer_data2onejob.py
+npy2joblib.py
 
-This script reads CFD data (.npz) and associated image data (.npy), applies 
-preprocessing steps (e.g., unit conversion, normalization, and region filtering), 
-and stores the combined data as a single .job file for each case. It also includes 
+This script reads CFD data (.npz) and associated image data (.npy), applies
+preprocessing steps (e.g., unit conversion, normalization, and region filtering),
+and stores the combined data as a single .job file for each case. It also includes
 a utility function to compare the shapes of original data and the stored data.
 
 Usage:
-    python transfer_data2onejob.py
+    python npy2joblib.py
 """
 import os
 import time
@@ -130,8 +130,6 @@ def process_all_data_parallel():
     end_time = time.time()
     print(f"Finished processing all data in {end_time - start_time:.2f} s")
 
-# Invoke the parallel data processing
-process_all_data_parallel()
 
 def compare_shapes():
     """
@@ -160,5 +158,8 @@ def compare_shapes():
     print(f"Original x_img_temp shape: {original_x_img_temp.shape}, Stored x_img_temp shape: {stored_x_img_temp.shape}")
     print(f"Original x_in_temp shape: {original_x_in_temp.shape}, Stored x_in_temp shape: {stored_x_in_temp.shape}")
 
-# Compare shapes to verify correctness
-compare_shapes()
+if __name__ == "__main__":
+    # Invoke the parallel data processing
+    process_all_data_parallel()
+    # Compare shapes to verify correctness
+    compare_shapes()

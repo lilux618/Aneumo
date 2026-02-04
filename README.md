@@ -59,7 +59,7 @@ All data formats are compatible with mainstream machine learning frameworks (PyT
 
 The project contains implementations of two main deep learning models and their inference code:
 
-### 1. DeepONet Model (`cfd_opt-deeponet`)
+### 1. DeepONet Model (`cfd_opt_deeponet`)
 
 - CFD surrogate model based on DeepONet architecture
 - Implementation files:
@@ -71,7 +71,7 @@ The project contains implementations of two main deep learning models and their 
   - Mixed precision computation
   - Checkpoint resumption functionality
 
-### 2. Swin+DeepONet Hybrid Model (`cfd_opt-swin+deeponet`)
+### 2. Swin+DeepONet Hybrid Model (`cfd_opt_swin_deeponet`)
 
 - Hybrid architecture combining Swin Transformer with DeepONet
 - Implementation files:
@@ -120,11 +120,11 @@ The project contains implementations of two main deep learning models and their 
 
 ```bash
 # For DeepONet model
-cd cfd_opt-deeponet
+cd cfd_opt_deeponet
 pip install -r requirements.txt
 
 # Or for Swin+DeepONet model
-cd cfd_opt-swin+deeponet
+cd cfd_opt_swin_deeponet
 pip install -r requirements.txt
 ```
 
@@ -149,11 +149,11 @@ real_data/
 
 ```bash
 # DeepONet model
-cd cfd_opt-deeponet
+cd cfd_opt_deeponet
 torchrun --nproc_per_node=NUM_GPUS ./main_train.py
 
 # Swin+DeepONet model
-cd cfd_opt-swin+deeponet
+cd cfd_opt_swin_deeponet
 torchrun --nproc_per_node=NUM_GPUS ./main_train_swin.py
 ```
 

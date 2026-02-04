@@ -123,7 +123,7 @@ This project demonstrates a full workflow from raw data → preprocessing → mo
 ## 12. Directory Structure
 
 ```
-Dataprepprocessing
+Data_preprocessing
 ├── calWallDistance.py
 ├── cfdPreprocess.py
 ├── cfdPreprocess_pred.py
